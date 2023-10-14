@@ -8,13 +8,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'sloth_shift',
+      title: 'MemoApp',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
         
       ),
-      home: MyHomePage(),
+      home: MemoPage(),
     );
   }
 }
