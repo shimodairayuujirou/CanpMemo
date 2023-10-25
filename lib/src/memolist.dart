@@ -12,25 +12,25 @@ class MemoPage extends StatelessWidget {
     return ChangeNotifierProvider<Model>(
       create: (_) => Model()..fetchContent(),
       child: Scaffold(
-        backgroundColor: Color.fromARGB(255, 91, 91, 91),
+        backgroundColor: Color.fromARGB(255, 230, 230, 230),
         appBar: AppBar(
           title: const Text(
             'メモ一覧',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Color.fromARGB(255, 227, 191, 32), fontWeight: FontWeight.bold),
           ),
-          backgroundColor: Color.fromARGB(255, 28, 23, 23),
+          backgroundColor: Color.fromARGB(255, 230, 230, 230),
         ),
         
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            Navigator.push(
+        onPressed: () {
+          Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => AddPage()),
             );
-          },
-          backgroundColor: Colors.black,
-          child: const Icon(Icons.add_outlined, color: Colors.white),
-        ),
+        },
+        backgroundColor: Color.fromARGB(255, 230, 230, 230),
+        child: const Icon(Icons.note_add,color: Color.fromARGB(255, 227, 191, 32),),
+      ),
       ),
     );
   }
