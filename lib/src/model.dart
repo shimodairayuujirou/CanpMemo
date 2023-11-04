@@ -6,7 +6,7 @@ class Model extends ChangeNotifier {
   List<Content> content = [];
 
   Future<void> fetchContent() async {
-    final docs = await FirebaseFirestore.instance.collection('users').doc('UID').collection('弱火').get();
+    final docs = await FirebaseFirestore.instance.collection('users').doc('UID').collection('Memo').get();
     final _titleValue = docs.docs
         .map((doc) => Content(doc)) 
         .toList();

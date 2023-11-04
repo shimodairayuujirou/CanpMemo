@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:memoapp/src/memolist.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class AddPage extends StatefulWidget {
@@ -90,7 +89,7 @@ class _AddPageState extends State<AddPage> {
               Padding(
                 padding: const EdgeInsets.only(top: 10, right: 30, left: 30),
                 child: TextFormField(
-                  maxLines: 6,
+                  maxLines: 15,
                   validator: (value) {
                     if (value!.isEmpty) {
                       return '詳細を記入してください';
