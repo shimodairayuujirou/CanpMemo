@@ -1,13 +1,16 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 class DetailPage extends StatelessWidget {
    const DetailPage({
     super.key,
     required this.detail,
-    required this.title
+    required this.title,
+    required this.Id,
   });
 
   final String detail;
   final String title;
+  final String Id;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class DetailPage extends StatelessWidget {
         actions:  [
           InkWell(child: Icon(Icons.delete),
             onTap: (){
-            showAlertDialog(context);},
+            showAlertDialog(context,Id);},
           ),
         ],
     ),
@@ -50,7 +53,7 @@ class DetailPage extends StatelessWidget {
   }
 }
 
-void showAlertDialog(BuildContext context) {
+void showAlertDialog(BuildContext context,Id) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -60,6 +63,7 @@ void showAlertDialog(BuildContext context) {
           SimpleDialogOption(
             child: Text('削除'),
             onPressed: () {
+              FirebaseFirestore.instance.collection('users').doc('UID').collection('Memo').doc(Id).delete();
               Navigator.of(context).pop();
               Navigator.of(context).pop();
             },

@@ -37,12 +37,14 @@ class MemoPage extends StatelessWidget {
                           color: Colors.white,
                           child: InkWell(
                             onTap: () {
+                              print(content[index].Id);
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
                                   builder: (context) => DetailPage(
                                     detail: content[index].detail,
                                     title: content[index].title,
+                                    Id: content[index].Id,
                                   )
                                 ),
                               );
