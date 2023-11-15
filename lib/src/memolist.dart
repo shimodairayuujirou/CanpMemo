@@ -10,7 +10,7 @@ class MemoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<Model>(
-      create: (_) => Model()..fetchContent(),
+      create: (_) => Model(),
       child: Scaffold(
         backgroundColor: const Color.fromARGB(255, 230, 230, 230),
         appBar: AppBar(
@@ -22,52 +22,52 @@ class MemoPage extends StatelessWidget {
         ),
         body: Consumer<Model>(
           builder: (context, model, child) {
-          final content = model.content;
-          return ListView.builder(
+            final content = model.content;
+            return ListView.builder(
               itemCount: content.length,
               itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    const SizedBox(height: 10),
-                    Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 25),
-                      child: SizedBox(
-                        height: 80,
-                        child: Card(
-                          color: Colors.white,
-                          child: InkWell(
-                            onTap: () {
-                              print(content[index].Id);
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => DetailPage(
-                                    detail: content[index].detail,
-                                    title: content[index].title,
-                                    Id: content[index].Id,
-                                  )
-                                ),
-                              );
-                            },
-                            child: Row(
-                              children:[
-                                const Padding(padding: EdgeInsets.only(left: 10),),
-                                Text(
-                                  content[index].title.length > 16
-                                    ? '${content[index].title.substring(0, 16)}...' // 17文字を超える場合、17文字まで切り取って "..." を追加
-                                    : content[index].title,
-                                  // 17文字以下の場合はそのまま表示
-                                  style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
-                                ),
-                              ]
+                return SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      const SizedBox(height: 10),
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 25),
+                        child: SizedBox(
+                          height: 80,
+                          child: Card(
+                            color: Colors.white,
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => DetailPage(
+                                      detail: content[index].detail,
+                                      title: content[index].title,
+                                      Id: content[index].Id,
+                                    )
+                                  ),
+                                );
+                              },
+                              child: Row(
+                                children:[
+                                  const Padding(padding: EdgeInsets.only(left: 10),),
+                                  Text(
+                                    content[index].title.length > 16
+                                      ? '${content[index].title.substring(0, 16)}...'
+                                      : content[index].title,
+                                    style: const TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+                                  ),
+                                ]
+                              ),
                             ),
                           ),
-                        ),
-                      )
-                    ),
-                  ],
+                        )
+                      ),
+                    ],
+                  ),
                 );
-              }
+              },
             );
           },
         ),
@@ -79,9 +79,10 @@ class MemoPage extends StatelessWidget {
             );
           },
           backgroundColor: const Color.fromARGB(255, 230, 230, 230),
-          child: const Icon(Icons.note_add,color: Color.fromARGB(255, 227, 191, 32),),
+          child: const Icon(Icons.note_add, color: Color.fromARGB(255, 227, 191, 32),),
         ),
-      )
+      ),
     );
   }
 }
+

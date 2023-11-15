@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         
       ),
-      home: MemoPage(),
+      home: const MemoPage(),
     );
   }
 }
