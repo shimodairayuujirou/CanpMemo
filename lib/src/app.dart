@@ -10,7 +10,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'MemoApp',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.grey,
+        ),
         useMaterial3: true,
         
       ),

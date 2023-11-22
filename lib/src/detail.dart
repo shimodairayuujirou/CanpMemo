@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:memoapp/src/update.dart';
 class DetailPage extends StatelessWidget {
    const DetailPage({
     super.key,
@@ -22,9 +23,13 @@ class DetailPage extends StatelessWidget {
           color: Color.fromARGB(255, 227, 191, 32),
         ),
         actions:  [
-          InkWell(child: Icon(Icons.delete),
-            onTap: (){
-            showAlertDialog(context,Id);},
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: InkWell(child: Icon(Icons.menu),
+              onTap: (){
+                showAlertDialog(context, Id, detail, title);
+              },
+            ),
           ),
         ],
     ),
@@ -53,27 +58,36 @@ class DetailPage extends StatelessWidget {
   }
 }
 
-void showAlertDialog(BuildContext context,Id) {
+void showAlertDialog(BuildContext context, String Id, String detail, String title) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
-      return SimpleDialog(
-        title: Text('削除の確認'),
-        children: [
-          SimpleDialogOption(
-            child: Text('削除'),
+      return AlertDialog(
+        title: Text('編集と削除'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => UpdatePage(
+                    detail: detail,
+                    title: title,
+                    Id: Id,
+                  ),
+                ),
+              );
+            },
+            child: Text('編集',style: TextStyle(fontSize: 18,color: Color.fromARGB(255, 194, 152, 28)),),
+          ),
+          TextButton(
             onPressed: () {
               FirebaseFirestore.instance.collection('users').doc('UID').collection('Memo').doc(Id).delete();
               Navigator.of(context).pop();
               Navigator.of(context).pop();
             },
+            child: Text('削除',style: TextStyle(fontSize: 18,color: Colors.red),),
           ),
-          SimpleDialogOption(
-            child: Text('キャンセル'),
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-          )
         ],
       );
     },
