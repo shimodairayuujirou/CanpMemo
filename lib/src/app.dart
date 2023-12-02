@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:memoapp/src/memolist.dart';
+import 'package:memoapp/src/component/bottom_navigationbar.dart';
+import 'package:memoapp/src/memo/memo_list.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CanpMemo extends StatelessWidget {
+  const CanpMemo({super.key});
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MemoApp',
+      title: 'CanpMemo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
           primarySwatch: Colors.grey,
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         
       ),
-      home: const MemoPage(),
+      home: const BottomNavigaionBar(),
     );
   }
 }

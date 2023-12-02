@@ -8,5 +8,5 @@ Future<void> main() async { // main 関数でも async が使えます
   await Firebase.initializeApp( // これが Firebase の初期化処理です。
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(const CanpMemo());
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:memoapp/src/model.dart';
-import 'package:memoapp/src/add.dart';
-import 'detail.dart';
+import 'package:memoapp/src/memo/model/memo_notifier.dart';
+import 'package:memoapp/src/memo/memo_add.dart';
+import 'memo_detail.dart';
 
 class MemoPage extends StatelessWidget {
   const MemoPage({Key? key}) : super(key: key);
@@ -12,13 +12,13 @@ class MemoPage extends StatelessWidget {
     return ChangeNotifierProvider<Model>(
       create: (_) => Model(),
       child: Scaffold(
-        backgroundColor: const Color.fromARGB(255, 230, 230, 230),
+        backgroundColor: Color(0xffECEAD8),
         appBar: AppBar(
           title: const Text(
             'メモ一覧',
-            style: TextStyle(color: Color.fromARGB(255, 227, 191, 32), fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
           ),
-          backgroundColor: const Color.fromARGB(255, 230, 230, 230),
+          backgroundColor: Color(0xff3D6E55),
         ),
         body: Consumer<Model>(
           builder: (context, model, child) {
@@ -78,8 +78,8 @@ class MemoPage extends StatelessWidget {
               MaterialPageRoute(builder: (context) => const AddPage()),
             );
           },
-          backgroundColor: const Color.fromARGB(255, 230, 230, 230),
-          child: const Icon(Icons.note_add, color: Color.fromARGB(255, 227, 191, 32),),
+          backgroundColor: const Color(0xff3D6E55),
+          child: const Icon(Icons.note_add, color: Colors.white),
         ),
       ),
     );
