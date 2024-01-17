@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:memoapp/src/memo/model/memo_notifier.dart';
-import 'package:memoapp/src/memo/memo_add.dart';
+import 'package:canpmemo/src/memo/model/memo_notifier.dart';
+import 'package:canpmemo/src/memo/memo_add.dart';
 import 'memo_detail.dart';
 
 class MemoPage extends StatelessWidget {

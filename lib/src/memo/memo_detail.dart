@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:memoapp/src/memo/memo_update.dart';
+import 'package:canpmemo/src/memo/memo_update.dart';
 class DetailPage extends StatelessWidget {
    const DetailPage({
     super.key,
@@ -16,9 +16,9 @@ class DetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 253, 251, 244),
       appBar: AppBar(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xff3D6E55),
         iconTheme: const IconThemeData(
           color: Color.fromARGB(255, 227, 191, 32),
         ),
@@ -63,6 +63,7 @@ void showAlertDialog(BuildContext context, String Id, String detail, String titl
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
+        backgroundColor: Color(0xffECEAD8),
         title: Text('編集と削除'),
         actions: [
           TextButton(

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:memoapp/src/memo/memo_update.dart';
+import 'package:canpmemo/src/memo/memo_update.dart';
 class DetailPage extends StatelessWidget {
    const DetailPage({
     super.key,

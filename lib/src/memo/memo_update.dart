@@ -34,9 +34,9 @@ class _UpdatePageState extends State<UpdatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffECEAD8),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xff3D6E55),
         iconTheme: const IconThemeData(
           color: Color.fromARGB(255, 227, 191, 32),
         ),
@@ -98,15 +98,15 @@ class _UpdatePageState extends State<UpdatePage> {
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Color(0xffECEAD8),),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: const BorderSide(
-                        color: Colors.white,
+                        color: Color(0xffECEAD8),
                       ),
                     ),
-                    fillColor: Colors.white,
+                    fillColor: Color.fromARGB(255, 253, 251, 244),
                     filled: true,
                   ),
                 ),
@@ -131,15 +131,15 @@ class _UpdatePageState extends State<UpdatePage> {
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Color(0xffECEAD8),),
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: const BorderSide(
-                        color: Colors.white,
+                        color: Color(0xffECEAD8),
                       ),
                     ),
-                    fillColor: Colors.white,
+                    fillColor: Color.fromARGB(255, 253, 251, 244),
                     filled: true,
                   ),
                 ),

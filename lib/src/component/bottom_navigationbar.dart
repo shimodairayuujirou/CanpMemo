@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:memoapp/src/canp_info/canp_info_page.dart';
-import 'package:memoapp/src/memo/memo_list.dart';
+import 'package:canpmemo/src/canp_info/canp_info_page.dart';
+import 'package:canpmemo/src/memo/memo_list.dart';
 
 class BottomNavigaionBar extends StatefulWidget {
   const BottomNavigaionBar({Key? key}) : super(key: key);
@@ -46,9 +46,9 @@ class _BottomNavigaionBarState extends State<BottomNavigaionBar> {
               icon: SizedBox(
                 height: 50,
                 width: 50,
-                child: Icon(Icons.info_outline),
+                child: Icon(Icons.map_rounded),
               ),
-              label: 'キャンプ情報',
+              label: 'キャンプ場',
             ),
           ],
           type: BottomNavigationBarType.fixed,

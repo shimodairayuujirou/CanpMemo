@@ -17,9 +17,13 @@ class _AddPageState extends State<AddPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xffECEAD8),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        title: const Text(
+          'メモ追加',
+          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Color(0xff3D6E55),
         iconTheme: const IconThemeData(
           color: Color.fromARGB(255, 227, 191, 32),
         ),
@@ -49,6 +53,7 @@ class _AddPageState extends State<AddPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+
               //タイトル記入欄
               Padding(
                 padding: const EdgeInsets.only(top: 10, right: 30, left: 30),
@@ -69,22 +74,23 @@ class _AddPageState extends State<AddPage> {
                     // 未選択時の枠線
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Color(0xffECEAD8)),
                     ),
                     // 選択時の枠線
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: const BorderSide(
-                        color: Colors.white,
+                        color: Color(0xffECEAD8),
                       ),
                     ),
                     // 中を塗りつぶす色
-                    fillColor: Colors.white,
+                    fillColor: Color.fromARGB(255, 253, 251, 244),
                     // 中を塗りつぶすかどうか
                     filled: true,
                   ),
                 ),
               ),
+
               //詳細記入欄
               Padding(
                 padding: const EdgeInsets.only(top: 10, right: 30, left: 30),
@@ -105,17 +111,17 @@ class _AddPageState extends State<AddPage> {
                     // 未選択時の枠線
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Color(0xffECEAD8)),
                     ),
                     // 選択時の枠線
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(15),
                       borderSide: const BorderSide(
-                        color: Colors.white,
+                        color: Color(0xffECEAD8),
                       ),
                     ),
                     // 中を塗りつぶす色
-                    fillColor: Colors.white,
+                    fillColor: Color.fromARGB(255, 253, 251, 244),
                     // 中を塗りつぶすかどうか
                     filled: true,
                   ),

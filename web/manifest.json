@@ -1,6 +1,6 @@
 {
-    "name": "memoapp",
-    "short_name": "memoapp",
+    "name": "canpmemo",
+    "short_name": "canpmemo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFFFFF",

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:memoapp/src/memo/model/memo_content.dart';
+import 'package:canpmemo/src/memo/model/memo_content.dart';
 
 class Model extends ChangeNotifier {
   List<Content> content = [];

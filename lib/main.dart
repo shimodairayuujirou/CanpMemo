@@ -1,5 +1,5 @@
-import 'package:memoapp/firebase_options.dart';
-import 'package:memoapp/src/app.dart';
+import 'package:canpmemo/firebase_options.dart';
+import 'package:canpmemo/src/app.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

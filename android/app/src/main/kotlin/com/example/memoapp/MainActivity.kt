@@ -1,4 +1,4 @@
-package com.example.memoapp
+package com.example.canpmemo
 
 import io.flutter.embedding.android.FlutterActivity
 

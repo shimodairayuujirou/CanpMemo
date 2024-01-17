@@ -63,6 +63,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '362001525673',
     projectId: 'memo-1bbf3',
     storageBucket: 'memo-1bbf3.appspot.com',
-    iosBundleId: 'com.example.memoapp',
+    iosBundleId: 'com.example.canpmemo',
   );
 }
