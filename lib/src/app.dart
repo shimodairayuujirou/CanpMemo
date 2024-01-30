@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:canpmemo/src/component/bottom_navigationbar.dart';
-import 'package:canpmemo/src/memo/memo_list.dart';
 
 class CanpMemo extends StatelessWidget {
   const CanpMemo({super.key});

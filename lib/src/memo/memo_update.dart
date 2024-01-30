@@ -36,6 +36,10 @@ class _UpdatePageState extends State<UpdatePage> {
     return Scaffold(
       backgroundColor: Color(0xffECEAD8),
       appBar: AppBar(
+        title: const Text(
+          '編集',
+          style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),
+        ),
         backgroundColor: Color(0xff3D6E55),
         iconTheme: const IconThemeData(
           color: Color.fromARGB(255, 227, 191, 32),

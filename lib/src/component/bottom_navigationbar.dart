@@ -12,7 +12,7 @@ class BottomNavigaionBar extends StatefulWidget {
 class _BottomNavigaionBarState extends State<BottomNavigaionBar> {
   static const _screens = [
     MemoPage(),
-    CanpInfoPage(),
+    CampInfoPage(),
   ];
 
   int _selectedIndex = 0;
